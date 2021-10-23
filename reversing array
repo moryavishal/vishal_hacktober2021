@@ -1,0 +1,24 @@
+#include <stdio.h>
+void main(){
+	int x[10];
+	int i,n,j, t;
+	printf("how many element : ");
+	scanf("%d",&n);
+	
+	printf("\nenter element one by one\n");
+	for(i=0;i<n;i++){
+		printf("");
+		scanf("%d",&x[i]);
+	}
+	for(i=0,j=n-1;i<n/2;i++,j--)
+	{
+		t=x[i];
+		x[i]=x[j];
+		x[j]=t;
+		
+	}
+	for(i=0;i<n;i++){
+		printf("x[%d] = %d\n",i+1,x[i]);
+	}
+	return 0;
+}
